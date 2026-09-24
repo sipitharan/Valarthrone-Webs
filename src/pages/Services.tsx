@@ -16,6 +16,7 @@ import { servicesData } from '@/data/services';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { RoyalDivider } from '@/components/ui/RoyalDivider';
+import SEO from '@/components/SEO';
 
 export const Services: React.FC = () => {
   const getServiceIcon = (iconName: string) => {
@@ -32,7 +33,13 @@ export const Services: React.FC = () => {
   };
 
   return (
-    <div className="pt-28 sm:pt-36 pb-24">
+    <>
+      <SEO
+        title="Website Development Services | Valarthrone Webs"
+        description="Explore modern, responsive website development services from Valarthrone Webs for businesses, startups and creators."
+        canonicalUrl="https://valarthronewebs.vercel.app/services"
+      />
+      <div className="pt-28 sm:pt-36 pb-24">
       {/* Hero Header */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16 sm:mb-20">
         <motion.div
@@ -164,7 +171,8 @@ export const Services: React.FC = () => {
           Request Consultation
         </Button>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

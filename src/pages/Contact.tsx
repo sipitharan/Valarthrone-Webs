@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { siteConfig } from '@/data/config';
 import { Button } from '@/components/ui/Button';
+import SEO from '@/components/SEO';
 
 interface FormData {
   name: string;
@@ -123,7 +124,13 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <div className="pt-28 sm:pt-36 pb-24">
+    <>
+      <SEO
+        title="Contact Valarthrone Webs | Build Your Website"
+        description="Contact Valarthrone Webs to discuss your website or digital project."
+        canonicalUrl="https://valarthronewebs.vercel.app/contact"
+      />
+      <div className="pt-28 sm:pt-36 pb-24">
       {/* Hero Header */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16 sm:mb-20">
         <motion.div
@@ -461,7 +468,8 @@ export const Contact: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

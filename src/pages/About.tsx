@@ -5,7 +5,7 @@ import { skillsData } from '@/data/skills';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { RoyalDivider } from '@/components/ui/RoyalDivider';
-
+import SEO from '@/components/SEO';
 export const About: React.FC = () => {
   const philosophies = [
     {
@@ -50,7 +50,13 @@ export const About: React.FC = () => {
   ];
 
   return (
-    <div className="pt-28 sm:pt-36 pb-24">
+    <>
+      <SEO
+        title="About Valarthrone Webs | Web Development"
+        description="Learn about Valarthrone Webs and our approach to building modern websites for businesses and creators."
+        canonicalUrl="https://valarthronewebs.vercel.app/about"
+      />
+      <div className="pt-28 sm:pt-36 pb-24">
       {/* Hero Header */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16 sm:mb-20">
         <motion.div
@@ -250,7 +256,8 @@ export const About: React.FC = () => {
           Start a Conversation
         </Button>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

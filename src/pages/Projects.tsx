@@ -5,6 +5,7 @@ import { projectsData, ProjectCategory } from '@/data/projects';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { ProjectPreviewVisual } from '@/assets/artwork/FantasyArtwork';
+import SEO from '@/components/SEO';
 
 type FilterType = 'All' | ProjectCategory;
 
@@ -18,7 +19,13 @@ export const Projects: React.FC = () => {
     : projectsData.filter((p) => p.category === activeFilter);
 
   return (
-    <div className="pt-28 sm:pt-36 pb-24">
+    <>
+      <SEO
+        title="Web Development Projects | Valarthrone Webs"
+        description="Explore websites and digital projects built by Valarthrone Webs."
+        canonicalUrl="https://valarthronewebs.vercel.app/projects"
+      />
+      <div className="pt-28 sm:pt-36 pb-24">
       {/* Hero Header */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12 sm:mb-16">
         <motion.div
@@ -162,7 +169,8 @@ export const Projects: React.FC = () => {
           </AnimatePresence>
         </motion.div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -32,6 +32,7 @@ import { Button } from '@/components/ui/Button';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Badge } from '@/components/ui/Badge';
 import { RoyalDivider } from '@/components/ui/RoyalDivider';
+import SEO from '@/components/SEO';
 import { CastleLandscape, ProjectPreviewVisual } from '@/assets/artwork/FantasyArtwork';
 
 export const Home: React.FC = () => {
@@ -114,7 +115,13 @@ export const Home: React.FC = () => {
   ];
 
   return (
-    <div className="relative overflow-x-hidden">
+    <>
+      <SEO
+        title="VALARTHRONE WEBS | Build Your Digital Kingdom"
+        description="VALARTHRONE WEBS creates modern, responsive and professional websites for businesses, startups and individuals."
+        canonicalUrl="https://valarthronewebs.vercel.app/"
+      />
+      <div className="relative overflow-x-hidden">
       {/* ============================================================ */}
       {/* 1. CINEMATIC FULL-SCREEN HERO */}
       {/* ============================================================ */}
@@ -626,6 +633,7 @@ export const Home: React.FC = () => {
           </div>
         </motion.div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
