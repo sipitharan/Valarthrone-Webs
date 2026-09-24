@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 interface SEOProps {
   title: string;
@@ -6,8 +6,14 @@ interface SEOProps {
   canonicalUrl: string;
 }
 
-const upsertMeta = (attribute: 'name' | 'property', key: string, content: string) => {
-  let meta = document.head.querySelector(`meta[${attribute}="${key}"]`) as HTMLMetaElement | null;
+const upsertMeta = (
+  attribute: 'name' | 'property',
+  key: string,
+  content: string
+) => {
+  let meta = document.head.querySelector(
+    `meta[${attribute}="${key}"]`
+  ) as HTMLMetaElement | null;
 
   if (!meta) {
     meta = document.createElement('meta');
@@ -15,20 +21,45 @@ const upsertMeta = (attribute: 'name' | 'property', key: string, content: string
     document.head.appendChild(meta);
   }
 
-  meta.content = content;
+  meta.setAttribute('content', content);
 };
 
-export default function SEO({ title, description, canonicalUrl }: SEOProps) {
+export default function SEO({
+  title,
+  description,
+  canonicalUrl,
+}: SEOProps) {
   useEffect(() => {
     document.title = title;
 
+    // Basic SEO
     upsertMeta('name', 'description', description);
+
+    // Open Graph
     upsertMeta('property', 'og:title', title);
     upsertMeta('property', 'og:description', description);
     upsertMeta('property', 'og:url', canonicalUrl);
     upsertMeta('property', 'og:type', 'website');
+    upsertMeta(
+      'property',
+      'og:image',
+      'https://valarthronewebs.vercel.app/assets/valarthrone-logo.png'
+    );
 
-    let canonical = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    // Twitter / X
+    upsertMeta('name', 'twitter:card', 'summary_large_image');
+    upsertMeta('name', 'twitter:title', title);
+    upsertMeta('name', 'twitter:description', description);
+    upsertMeta(
+      'name',
+      'twitter:image',
+      'https://valarthronewebs.vercel.app/assets/valarthrone-logo.png'
+    );
+
+    // Canonical URL
+    let canonical = document.head.querySelector(
+      'link[rel="canonical"]'
+    ) as HTMLLinkElement | null;
 
     if (!canonical) {
       canonical = document.createElement('link');
