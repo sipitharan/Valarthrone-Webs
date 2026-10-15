@@ -10,8 +10,6 @@ export interface SiteConfig {
   heroSmallLabel: string;
   navItems: NavItem[];
   socialLinks: {
-    github: string;
-    linkedin: string;
     whatsapp: string;
     email: string;
   };
@@ -32,10 +30,8 @@ export const siteConfig: SiteConfig = {
     { label: 'Contact', path: '/contact' },
   ],
   socialLinks: {
-    github: 'https://github.com/valarthrone-webs',
-    linkedin: 'https://linkedin.com/company/valarthrone-webs',
     whatsapp: 'https://wa.me/917540079392',
-    email: 'contact@valarthronewebs.com',
+    email: 'siprites.official@gmail.com',
   },
   phone: '7540079392',
   keyPillars: [
@@ -45,4 +41,3 @@ export const siteConfig: SiteConfig = {
     'SEO READY',
   ],
 };
-

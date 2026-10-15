@@ -40,6 +40,11 @@ export default function SEO({
     upsertMeta('property', 'og:description', description);
     upsertMeta('property', 'og:url', canonicalUrl);
     upsertMeta('property', 'og:type', 'website');
+    // Pricing is custom/flexible rather than a fixed, hard-coded price.
+    upsertMeta('property', 'og:price:amount', '0');
+    upsertMeta('property', 'og:price:currency', 'USD');
+    upsertMeta('property', 'product:price:amount', '0');
+    upsertMeta('property', 'product:price:currency', 'USD');
     upsertMeta(
       'property',
       'og:image',

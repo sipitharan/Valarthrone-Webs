@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, MessageSquare, Phone, ArrowUpRight } from 'lucide-react';
+import { Mail, MessageSquare, Phone, ArrowUpRight } from 'lucide-react';
 import { siteConfig } from '@/data/config';
 import { servicesData } from '@/data/services';
 
@@ -49,24 +49,6 @@ export const Footer: React.FC = () => {
 
             {/* Social Icons */}
             <div className="flex items-center space-x-3 pt-2">
-              <a
-                href={siteConfig.socialLinks.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-kingdom-900 border border-steel-700/60 text-steel-300 hover:text-gold hover:border-gold/50 transition-colors"
-                aria-label="GitHub Repository"
-              >
-                <Github className="w-4 h-4" />
-              </a>
-              <a
-                href={siteConfig.socialLinks.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-kingdom-900 border border-steel-700/60 text-steel-300 hover:text-gold hover:border-gold/50 transition-colors"
-                aria-label="LinkedIn Profile"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
               <a
                 href={siteConfig.socialLinks.whatsapp}
                 target="_blank"

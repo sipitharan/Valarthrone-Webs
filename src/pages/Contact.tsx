@@ -5,8 +5,6 @@ import {
   Mail,
   MessageSquare,
   Phone,
-  Github,
-  Linkedin,
   Send,
   CheckCircle,
   AlertCircle,
@@ -230,41 +228,6 @@ export const Contact: React.FC = () => {
                   </div>
                 </a>
 
-                {/* GitHub */}
-                <a
-                  href={siteConfig.socialLinks.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-kingdom-950/80 border border-steel-800 hover:border-gold/50 transition-all group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-kingdom-800/80 border border-steel-700 flex items-center justify-center text-steel-300 group-hover:scale-105 transition-transform">
-                    <Github className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-mono uppercase text-steel-400 block">Code Repository</span>
-                    <span className="text-sm font-semibold text-white group-hover:text-gold transition-colors">
-                      github.com/valarthrone-webs
-                    </span>
-                  </div>
-                </a>
-
-                {/* LinkedIn */}
-                <a
-                  href={siteConfig.socialLinks.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-kingdom-950/80 border border-steel-800 hover:border-gold/50 transition-all group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-blue-950/60 border border-blue-700/50 flex items-center justify-center text-blue-400 group-hover:scale-105 transition-transform">
-                    <Linkedin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-mono uppercase text-steel-400 block">Professional Network</span>
-                    <span className="text-sm font-semibold text-white group-hover:text-gold transition-colors">
-                      linkedin.com/company/valarthrone-webs
-                    </span>
-                  </div>
-                </a>
               </div>
 
               {/* Response Time Guarantee */}
