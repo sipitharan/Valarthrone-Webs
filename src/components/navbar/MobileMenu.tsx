@@ -64,7 +64,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               <img
                 src="/assets/valarthrone-logo.png"
                 alt="VALARTHRONE WEBS"
-                className="w-8 h-8 object-contain"
+                className="w-10 h-10 object-contain"
               />
               <div className="flex flex-col">
                 <span className="font-serif font-bold text-lg text-white tracking-wider">
@@ -139,4 +139,3 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
     </AnimatePresence>
   );
 };
-

@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
               <img
                 src="/assets/valarthrone-logo.png"
                 alt="VALARTHRONE WEBS"
-                className="w-[34px] h-[34px] object-contain"
+                className="w-11 h-11 object-contain"
               />
               <div className="flex flex-col">
                 <span className="font-serif font-extrabold text-xl tracking-wider text-white group-hover:text-gold transition-colors">
@@ -144,4 +144,3 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
-
